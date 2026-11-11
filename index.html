@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8eeeb">
+  <title>A Little Piece of Us — Zahra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bgMusic" loop preload="auto" data-audio-base="assets/music/song"></audio>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="#" data-page="home">a little piece of us <span>♡</span></a>
+    <div class="top-actions">
+      <span class="music-status" id="musicStatus">♫ birthday soundtrack</span>
+      <button class="icon-button" id="musicToggle" aria-label="Putar atau jeda musik">♫</button>
+      <button class="menu-button" id="menuToggle" aria-label="Buka menu">☰</button>
+    </div>
+  </header>
+
+  <nav class="nav" id="nav">
+    <button data-page="home" class="active">Home</button>
+    <button data-page="birthday">Birthday</button>
+    <button data-page="littleThings">Little things</button>
+    <button data-page="gallery">Gallery</button>
+    <button data-page="videos">Little moments</button>
+    <button data-page="letter">A letter</button>
+    <button data-page="wishes">Wishes</button>
+  </nav>
+
+  <main>
+    <section class="page active" id="countdownGate">
+      <div class="countdown-gate scrapbook-paper">
+        <div class="hero-sparkle">✦ &nbsp; something special is coming &nbsp; ✦</div>
+        <p class="eyebrow">A LITTLE SURPRISE FOR ZAHRA</p>
+        <p class="script gate-script">the day is getting closer...</p>
+        <h1 class="gate-title">Until your<br><em>special day.</em></h1>
+        <p class="hero-copy">Ada kejutan kecil yang menunggumu pada<br class="desktop"> 12 November 2026.</p>
+        <div class="countdown-clock" aria-live="polite">
+          <div><strong id="gateDays">00</strong><span>days</span></div>
+          <b>:</b>
+          <div><strong id="gateHours">00</strong><span>hours</span></div>
+          <b>:</b>
+          <div><strong id="gateMinutes">00</strong><span>minutes</span></div>
+          <b>:</b>
+          <div><strong id="gateSeconds">00</strong><span>seconds</span></div>
+        </div>
+        <div class="gate-flower">✿</div>
+        <p class="tiny-note">12 · 11 · 2026 &nbsp; — &nbsp; made with love ♡</p>
+        <div class="hero-bottom"><span>counting every second</span><span>00 / 10</span></div>
+      </div>
+    </section>
+
+    <section class="page" id="birthdayLock">
+      <div class="lock-screen scrapbook-paper">
+        <div class="hero-sparkle">✦ &nbsp; your special day is here &nbsp; ✦</div>
+        <div class="lock-icon" aria-hidden="true"><span class="lock-shackle"></span><span class="lock-body">♡</span></div>
+        <p class="eyebrow">A LITTLE SECRET JUST FOR YOU</p>
+        <p class="script lock-script">one little key to open it...</p>
+        <h1 class="lock-title">A surprise<br><em>is waiting.</em></h1>
+        <p class="lock-copy">Sebelum masuk, ada satu hal kecil yang harus kamu ingat.<br>Masukkan tanggal lahirmu untuk membuka kejutan ini. ♡</p>
+        <form class="lock-form" id="birthdayCodeForm">
+          <label for="birthdayCode">YOUR SECRET CODE</label>
+          <input id="birthdayCode" name="birthdayCode" type="text" inputmode="numeric" autocomplete="off" maxlength="8" pattern="[0-9]{8}" placeholder="DDMMYYYY" aria-describedby="codeError" required>
+          <button class="primary-button" type="submit">Open my surprise <span>♡</span></button>
+          <p class="lock-error" id="codeError" role="alert" aria-live="polite"></p>
+        </form>
+        <p class="tiny-note">a little date only you would know · 12.11.2026</p>
+        <div class="hero-bottom"><span>made with love</span><span>♡ / 08</span></div>
+      </div>
+    </section>
+
+    <section class="page" id="home">
+      <div class="hero scrapbook-paper">
+        <div class="hero-sparkle">✦ &nbsp; a day made for you &nbsp; ✦</div>
+        <div class="tape tape-left"></div><div class="tape tape-right"></div>
+        <p class="eyebrow">12 NOVEMBER 2026 · A SPECIAL DAY</p>
+        <h1>For my<br><em>favorite</em> person.</h1>
+        <p class="hero-copy">Ada satu kejutan kecil yang sudah kusiapkan<br class="desktop"> khusus untuk kamu, Sayangkuuu.</p>
+        <div class="envelope-wrap">
+          <div class="envelope" id="envelope">
+            <div class="envelope-back"></div><div class="envelope-letter">with all my love <span>♡</span></div>
+            <div class="envelope-flap"></div><div class="envelope-front"></div>
+            <div class="envelope-heart">♡</div>
+          </div>
+        </div>
+        <button class="primary-button" id="openSurprise">Open your surprise <span>↗</span></button>
+        <p class="tiny-note">psst… nyalakan suara perangkatmu ya ♡</p>
+        <div class="hero-bottom"><span>made with love</span><span>01 / 08</span></div>
+      </div>
+      <div class="floating-note note-one">you are<br>my sunshine ☼</div>
+      <div class="floating-note note-two">a thousand<br>little reasons ♡</div>
+    </section>
+
+    <section class="page" id="birthday">
+      <div class="section-kicker">01 — TODAY IS YOUR DAY</div>
+      <div class="birthday-layout">
+        <div class="birthday-copy">
+          <p class="script">happy birthday,</p>
+          <h2>Sayangkuuu<br><em>Cintakuuu</em></h2>
+          <p class="lead">Zahra Azihiyah Kurniawan</p>
+          <div class="divider-heart">♡ ───────── ♡</div>
+          <p>Hari ini dunia merayakan seseorang yang begitu berarti. Semoga setiap langkahmu dipenuhi hal baik, setiap doamu menemukan jalannya, dan setiap harimu punya alasan untuk tersenyum.</p>
+          <p class="script signature">with love, always.</p>
+          <button class="text-button" data-next="littleThings">Discover little things about you →</button>
+        </div>
+        <div class="birthday-photo polaroid">
+          <img class="birthday-main-image" data-media-base="assets/images/birthday-photo" alt="Foto ulang tahun Zahra" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>♡</span><small>Tambahkan birthday-photo.jpeg</small></div>
+          <p>the prettiest part of my days</p>
+        </div>
+      </div>
+      <div class="countdown-card"><span class="count-label">A little countdown to your special day</span><div id="birthdayCountdown">12 · 11 · 2026</div></div>
+    </section>
+
+    <section class="page" id="littleThings">
+      <div class="section-kicker">02 — A LITTLE GAME JUST FOR YOU</div>
+      <div class="scrapbook-board matching-board">
+        <div class="scrapbook-heading">
+          <span class="mini-label">a tiny game from my heart</span>
+          <p class="script">a little something to discover</p>
+          <h2>Little things<br><em>about you.</em></h2>
+          <p class="muted">Temukan empat pasangan kartu yang sama. Setiap pasangan menyimpan satu pesan kecil untukmu. ♡</p>
+          <span class="sticker sticker-flower">✿</span>
+          <span class="sticker sticker-heart">♡</span>
+        </div>
+
+        <div class="matching-intro">
+          <span class="matching-washi">a little memory game</span>
+          <p>Balik dua kartu dalam satu giliran. Kalau simbolnya sama, kamu akan menemukan satu little note dariku.</p>
+        </div>
+
+        <div class="matching-scoreboard" aria-live="polite">
+          <div class="score-item"><span>PAIRS FOUND</span><strong id="pairsFound">0 <small>/ 4</small></strong></div>
+          <div class="score-item"><span>MOVES</span><strong id="movesCount">0</strong></div>
+          <div class="score-item"><span>PROGRESS</span><strong id="gameProgress">0%</strong></div>
+        </div>
+
+        <div class="memory-grid" id="memoryGrid" aria-label="Memory matching cards"></div>
+
+        <div class="matching-note" id="matchingNote" aria-live="polite">
+          <span class="note-pin">♡</span>
+          <span class="note-kicker">YOUR LITTLE NOTE</span>
+          <strong id="noteTitle">A note is waiting for you</strong>
+          <p id="noteMessage">Temukan pasangan pertamamu untuk membuka pesan kecil di sini.</p>
+          <span class="note-signature" id="noteSignature">with love, always ♡</span>
+        </div>
+
+        <div class="matching-actions">
+          <button class="matching-reset" id="resetMatching" type="button">↻ &nbsp; Play again</button>
+          <span class="matching-hint">no rush, take your time ♡</span>
+        </div>
+
+        <div class="matching-complete" id="matchingComplete" hidden>
+          <span class="complete-sparkle">✦　♡　✦</span>
+          <p class="script">you found them all!</p>
+          <h3>Every little thing<br><em>is worth celebrating.</em></h3>
+          <p>Semoga kamu selalu ingat bahwa ada begitu banyak hal baik dalam dirimu. Teruslah menjadi dirimu sendiri, Zahra. ♡</p>
+          <button class="primary-button" type="button" data-next="gallery">Open our photo diary →</button>
+        </div>
+
+        <div class="scrapbook-bottom-note"><span>made of little thoughts</span><span>♡</span><span>for zahra · 12.11.2026</span></div>
+        <div class="scrapbook-doodle doodle-one">✧</div><div class="scrapbook-doodle doodle-two">♡</div>
+      </div>
+      <button class="text-button" data-next="gallery">Continue to our memories →</button>
+    </section>
+
+    <section class="page" id="gallery">
+      <div class="section-kicker">03 — SNAPSHOTS & SOFT MEMORIES</div>
+      <div class="center-heading"><p class="script">keepsakes</p><h2>Our photo <em>diary.</em></h2><p class="muted">Klik foto untuk melihatnya lebih dekat. Ganti kotak-kotak ini dengan foto kalian.</p></div>
+      <div class="photo-grid">
+        <button class="photo-card tilt-one" type="button" data-photo-base="assets/images/photo-1" aria-label="Buka foto kenangan 1">
+          <img class="gallery-photo" alt="Kenangan 1" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>01</span><small>Tambahkan photo-1.jpeg</small></div>
+          <p>little moments</p>
+        </button>
+        <button class="photo-card tilt-two" type="button" data-photo-base="assets/images/photo-2" aria-label="Buka foto kenangan 2">
+          <img class="gallery-photo" alt="Kenangan 2" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>02</span><small>Tambahkan photo-2.jpeg</small></div>
+          <p>favorite smile</p>
+        </button>
+        <button class="photo-card tilt-three" type="button" data-photo-base="assets/images/photo-3" aria-label="Buka foto kenangan 3">
+          <img class="gallery-photo" alt="Kenangan 3" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>03</span><small>Tambahkan photo-3.jpeg</small></div>
+          <p>somewhere together</p>
+        </button>
+        <button class="photo-card tilt-four" type="button" data-photo-base="assets/images/photo-4" aria-label="Buka foto kenangan 4">
+          <img class="gallery-photo" alt="Kenangan 4" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>04</span><small>Tambahkan photo-4.jpeg</small></div>
+          <p>my kind of day</p>
+        </button>
+        <button class="photo-card tilt-five" type="button" data-photo-base="assets/images/photo-5" aria-label="Buka foto kenangan 5">
+          <img class="gallery-photo" alt="Kenangan 5" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>05</span><small>Tambahkan photo-5.jpeg</small></div>
+          <p>just us</p>
+        </button>
+        <button class="photo-card tilt-six" type="button" data-photo-base="assets/images/photo-6" aria-label="Buka foto kenangan 6">
+          <img class="gallery-photo" alt="Kenangan 6" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>06</span><small>Tambahkan photo-6.jpeg</small></div>
+          <p>one to remember</p>
+        </button>
+        <button class="photo-card tilt-one" type="button" data-photo-base="assets/images/photo-7" aria-label="Buka foto kenangan 7">
+          <img class="gallery-photo" alt="Kenangan 7" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>07</span><small>Tambahkan photo-7.jpeg</small></div>
+          <p>little adventure</p>
+        </button>
+        <button class="photo-card tilt-two" type="button" data-photo-base="assets/images/photo-8" aria-label="Buka foto kenangan 8">
+          <img class="gallery-photo" alt="Kenangan 8" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>08</span><small>Tambahkan photo-8.jpeg</small></div>
+          <p>your lovely smile</p>
+        </button>
+        <button class="photo-card tilt-three" type="button" data-photo-base="assets/images/photo-9" aria-label="Buka foto kenangan 9">
+          <img class="gallery-photo" alt="Kenangan 9" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>09</span><small>Tambahkan photo-9.jpeg</small></div>
+          <p>favorite view</p>
+        </button>
+        <button class="photo-card tilt-four" type="button" data-photo-base="assets/images/photo-10" aria-label="Buka foto kenangan 10">
+          <img class="gallery-photo" alt="Kenangan 10" hidden>
+          <div class="photo-placeholder" data-media-fallback><span>10</span><small>Tambahkan photo-10.jpeg</small></div>
+          <p>always a memory</p>
+        </button>
+      </div>
+      <div class="photo-modal" id="photoModal"><button id="closeModal">×</button><img id="modalImage" alt="Kenangan kita"></div>
+    </section>
+
+    <section class="page" id="videos">
+      <div class="section-kicker">04 — MOVING MEMORIES</div>
+      <div class="center-heading"><p class="script">little moments, on repeat</p><h2>Our tiny <em>movie.</em></h2><p class="muted">Simpan potongan cerita yang ingin kamu putar lagi dan lagi.</p></div>
+      <div class="video-frame">
+        <video id="memoryVideo" controls playsinline preload="metadata" data-video-base="assets/videos/memory-1" data-poster-base="assets/images/video-cover">
+          Browser kamu belum mendukung video.
+        </video>
+        <div class="video-help" id="videoHelp">Tambahkan <code>memory-1.mp4</code> ke folder <code>assets/videos/</code>. Poster opsional: <code>video-cover.jpeg</code> di folder <code>assets/images/</code>.</div>
+      </div>
+      <div class="video-caption"><span class="script">a moment worth keeping</span><p>“Some memories never leave. They just find a little home in our hearts.”</p></div>
+      <div class="video-thumbs"><div>♡ &nbsp; memory no. 01</div><div>✿ &nbsp; the days we keep</div><div>✦ &nbsp; more to come</div></div>
+    </section>
+
+    <section class="page" id="letter">
+      <div class="section-kicker">05 — SOMETHING FROM MY HEART</div>
+      <div class="letter-area">
+        <p class="script">a letter, just for you</p>
+        <h2>Dear, <em>Zahra.</em></h2>
+        <div class="letter-paper">
+          <div class="letter-stamp">to<br>you ♡</div>
+          <p class="letter-greeting">Untuk Sayangkuuu Cintakuuu,</p>
+          <p>Selamat bertambah usia, ya. Terima kasih sudah menjadi bagian dari cerita dan hari-hariku. Di hari spesialmu ini, aku ingin kamu tahu bahwa kamu pantas mendapatkan banyak kebahagiaan, ketenangan, dan hal-hal baik.</p>
+          <p>Semoga kamu selalu diberi kesehatan, dikuatkan dalam setiap proses, dimudahkan dalam meraih cita-cita, dan dikelilingi orang-orang yang tulus menyayangimu. Jangan lupa untuk bangga pada dirimu sendiri, termasuk atas hal-hal kecil yang sudah berhasil kamu lewati.</p>
+          <p>Teruslah menjadi Zahra yang punya banyak mimpi. Semoga tahun ini membawa lebih banyak alasan untuk tersenyum dan cerita indah untuk dikenang.</p>
+          <p class="letter-greeting">Happy birthday, my favorite human. ♡</p>
+          <p class="script letter-sign">with all my love,</p>
+          <p class="letter-sign-name">Someone who cares for you ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="wishes">
+      <div class="section-kicker">06 — THE LAST LITTLE SURPRISE</div>
+      <div class="wishes-content">
+        <p class="script">make a wish, love</p>
+        <h2>May this year<br>be <em>kind to you.</em></h2>
+        <div class="cake" id="cake"><div class="candle"><div class="flame" id="flame"></div></div><div class="icing"></div><div class="cake-top"></div><div class="cake-bottom"></div></div>
+        <button class="primary-button" id="blowCandle">Make a wish & blow the candle ♡</button>
+        <p id="wishMessage" class="wish-message">Pejamkan mata, buat satu harapan, lalu klik tombolnya.</p>
+        <div class="final-note">No matter how many pages this little website has,<br>the best part is that it was made for you. <span>♡</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lights-out" id="lightsOut" aria-hidden="true">
+    <div class="night-sparkles">✦　·　♡　·　✧　·　✦</div>
+    <div class="night-content">
+      <p class="script">make a wish, my love</p>
+      <h2>Even in the dark,<br><em>you are my light.</em></h2>
+      <p class="night-message">Semoga semua hal baik menemukan jalannya untukmu, Zahra.<br>Terus bersinar dengan caramu sendiri. ♡</p>
+      <div class="night-signature">with all my love · always</div>
+      <button class="night-return" id="nightReturn">Turn the lights back on</button>
+    </div>
+  </div>
+  <footer><span>made with love, just for Zahra</span><span>♡</span><span>12 · 11 · 2026</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

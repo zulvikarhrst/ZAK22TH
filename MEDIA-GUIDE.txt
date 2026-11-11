@@ -1,0 +1,26 @@
+MEDIA GUIDE — ZAHRA WEBSITE V9
+
+FOTO BIRTHDAY
+  assets/images/birthday-photo.jpeg
+  Ekstensi alternatif: .jpg .png .webp
+
+10 FOTO GALLERY
+  assets/images/photo-1.jpeg
+  assets/images/photo-2.jpeg
+  ...
+  assets/images/photo-10.jpeg
+  Ekstensi alternatif untuk setiap foto: .jpg .png .webp
+
+POSTER VIDEO (OPSIONAL)
+  assets/images/video-cover.jpeg
+  Ekstensi alternatif: .jpg .png .webp
+
+VIDEO
+  assets/videos/memory-1.mp4 (direkomendasikan)
+  Alternatif: assets/videos/memory-1.webm
+
+MUSIK
+  assets/music/song.mp3 (direkomendasikan)
+  Alternatif: song.ogg atau song.wav
+
+Setelah menambahkan media, refresh browser dengan Ctrl + F5.
