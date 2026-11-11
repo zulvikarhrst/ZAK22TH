@@ -69,6 +69,35 @@ if(memoryVideo){
   });
 }
 
+// ==================================================
+// AUTO PAUSE BACKGROUND MUSIC WHEN VIDEO PLAYS
+// ==================================================
+
+let resumeBackgroundAfterVideo = false;
+
+if (memoryVideo && audio) {
+
+  // Saat video mulai diputar
+  memoryVideo.addEventListener('play', () => {
+    resumeBackgroundAfterVideo = !audio.paused;
+
+    if (resumeBackgroundAfterVideo) {
+      audio.pause();
+    }
+  });
+
+  // Saat video dijeda atau selesai
+  function resumeBackgroundMusic() {
+    if (resumeBackgroundAfterVideo) {
+      resumeBackgroundAfterVideo = false;
+      startMusic();
+    }
+  }
+
+  memoryVideo.addEventListener('pause', resumeBackgroundMusic);
+  memoryVideo.addEventListener('ended', resumeBackgroundMusic);
+}
+
 // Background soundtrack supports MP3, OGG and WAV. Playback still starts after interaction.
 let musicFileReady=false;
 loadMediaSource(audio,audio.dataset.audioBase,[
